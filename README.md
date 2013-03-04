@@ -2,15 +2,17 @@ HTML5 Challenge
 ===============
 
 Colorwheels and Emoticons 
-
-* There are 2 color wheels with 12 colors each. You can pick the colors you like for each wheel. 
-  * (kuler.adobe.com could be helpful in picking colors)
+-------------------------
+* There are 2 color wheels with 12 colors each. 
+  * You can pick the colors you like for each wheel. (kuler.adobe.com could be helpful in picking colors)
+  * The color wheels intersect as shown in wireframe. The intersection is transparent enough to show 2 colors.
 * In the middle of the color wheels, there is a walking/running man. 
   * There is an included asset in the project or you can build your own as well.
 * The card shows one of 72 emoticons.
   * There is an included asset in the project or you can build your own as well.
 
 Interactions:
+-------------
 * By dragging the two color wheels down, you can start spinning them. 
   * The faster you drag them they will accelerate and spin faster. 
   * The two men in the middle of the two wheels should run facing each other as the wheels spin. The running should speed up and slow down with the acceleration/decelaration of wheels.
@@ -24,6 +26,7 @@ Interactions:
 * The scene is set up again with the wheels for the next spin.
 
 Instructions:
+-------------
 * Use Javascript, HTML5, CSS. The app should run on Chrome, Safari and Firefox, latest versions.
 * Code quality is as important as functionality.
 * Do not hesitate to show your artistic skills either. The look and feel is up-to-you. We included some assets but you are free to choose your own.
