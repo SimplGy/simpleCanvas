@@ -22,7 +22,7 @@ Interactions:
 * When both wheels stop, wait for 1sec and then show the card (as shown in wireframe) with the emoticon inside. 
   * The card should start (animation) showing from the intersection and grow to the top of the 2 wheels (as shown in wireframe)
   * Use an ease-out type animation and bounce the card 2 times at the end between smaller and bigger sizes.
-* When you click on the card, it should clear by tearing into 10+ pieces (think off an exploding type animation)
+* When you click on the card, it should remove the card by fading out.
 * The scene is set up again with the wheels for the next spin.
 
 Instructions:
