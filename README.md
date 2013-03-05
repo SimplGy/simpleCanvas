@@ -13,7 +13,8 @@ Colorwheels and Emoticons
 
 Interactions:
 -------------
-* By dragging the two color wheels down, you can start spinning them. 
+* By dragging the two color wheels down (using the mouse-down-move clockwise), you can start spinning them. 
+  * Each wheel will spin independently. The wheel on the left is a counter-clockwise drag and the one on the right is a clock-wise drag.
   * The faster you drag them they will accelerate and spin faster. 
   * The two men in the middle of the two wheels should run facing each other as the wheels spin. The running should speed up and slow down with the acceleration/decelaration of wheels.
 * Once you stop dragging them, the wheels should start slowing down. And finally when both stop, the color combination in between the two wheels will be the selected one.
@@ -28,7 +29,7 @@ Interactions:
 Instructions:
 -------------
 * Use Javascript, HTML5, CSS. The app should run on Chrome, Safari and Firefox, latest versions.
-* Code quality is as important as functionality.
+* Code quality is as important as functionality. Well structured Javascript and CSS code will be very important for us. 
 * Do not hesitate to show your artistic skills either. The look and feel is up-to-you. We included some assets but you are free to choose your own.
 
 
