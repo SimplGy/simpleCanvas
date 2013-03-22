@@ -1,36 +1,32 @@
 HTML5 Challenge
 ===============
 
-Colorwheels and Emoticons 
--------------------------
-* There are 2 color wheels with 12 colors each. 
-  * You can pick the colors you like for each wheel. (kuler.adobe.com could be helpful in picking colors)
-  * The color wheels intersect as shown in wireframe. The intersection is transparent enough to show 2 colors.
-* In the middle of the color wheels, there is a walking/running man. 
-  * There is an included asset in the project or you can build your own as well.
-* The card shows one of 72 emoticons.
-  * There is an included asset in the project or you can build your own as well.
-
-Interactions:
--------------
-* By dragging the two color wheels down (using the mouse-down-move clockwise), you can start spinning them. 
-  * Each wheel will spin independently. The wheel on the left is a counter-clockwise drag and the one on the right is a clock-wise drag.
-  * The faster you drag them they will accelerate and spin faster. 
-  * The two men in the middle of the two wheels should run facing each other as the wheels spin. The running should speed up and slow down with the acceleration/decelaration of wheels.
-* Once you stop dragging them, the wheels should start slowing down. And finally when both stop, the color combination in between the two wheels will be the selected one.
-* There are 12x12 selections possible and 72 emoticons available. 
-  * Map those selections to one emoticon. (Since there are less emoticons, some will show for more than one selection.)
-* When both wheels stop, wait for 1sec and then show the card (as shown in wireframe) with the emoticon inside. 
-  * The card should start (animation) showing from the intersection and grow to the top of the 2 wheels (as shown in wireframe)
-  * Use an ease-out type animation and bounce the card 2 times at the end between smaller and bigger sizes.
-* When you click on the card, it should remove the card by fading out.
-* The scene is set up again with the wheels for the next spin.
+Shapes and Colors:
+------------------
+* The scene is wireframed as can be seen in wireframe.png
+* User can choose the Shape dropdown and pick a square, circle for the shape. (Square is the default)
+ * Once a shape is chosen from the dropdown, when a user clicks on an empty area in the canvas the chosen shape is drawn. The bounding rectangle of the shape is 100x100px and the origin is the cursor location.
+	* Shape z-order is the order of shapes created where the last created shape is topmost.
+	* Clicking on an area selects the top most shape in that area.
+* User can choose a shape and drag them around the canvas.
+	* The shape is cropped around the edges.
+* User can then choose the Color dropdown and the color dropdown shows a colorwheel:
+ * The color wheel shows 12 colors. You can pick the colors you like for each wheel. (kuler.adobe.com could be helpful in picking colors)
+ * The triangle in the middle points to the selected color.
+* By dragging the color wheel down (using the mouse-down-move clockwise), you can start spinning them. 
+  * The faster you drag them it will accelerate and spin faster. 
+  * Once you stop dragging it, the wheel should start slowing down. 
+  * Once the wheel stops, the color selected is where the triangle points to.
+* The selected color will be the fill color of the selected shape on canvas. 
 
 Instructions:
 -------------
-* Use Javascript, HTML5, CSS. The app should run on Chrome, Safari and Firefox, latest versions.
+* Please use Javascript, HTML5, CSS. The app should run on Chrome, Safari and Firefox, latest versions. (Desktop)
+* Please pick an MVC framework of your choice. (Backbone, Ember, Angular ...) We would like to see well structured code.
+* You do not need to write the backend server code for this, but please structure your code so that the shapes, their locations on the canvas and their colors can be persisted back.
+* Clean packaging of the code is a good plus for us to see. (Folder structure, dependency declarations, build scripts with linting etc.)
 * Code quality is as important as functionality. Well structured Javascript and CSS code will be very important for us. 
-* Do not hesitate to show your artistic skills either. The look and feel is up-to-you. We included some assets but you are free to choose your own.
+* Do not hesitate to show your artistic skills either. The look and feel is up-to-you. 
 
 
 
