@@ -20,7 +20,7 @@ define(["text!./colorPicker.tmpl.html"], function(tmpl) {
     onColorClick: function(e) {
       var color;
 
-      color = $(e.target).text();
+      color = $(e.target).data('color');
       return this.options.app.set('curColor', color);
     }
   });

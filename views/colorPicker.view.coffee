@@ -19,7 +19,10 @@ define ["text!./colorPicker.tmpl.html"], (tmpl) ->
       @
 
     onColorClick: (e) ->
-      color = $(e.target).text()
+      color = $(e.target).data('color')
       @options.app.set 'curColor', color
 
   Page
+
+
+

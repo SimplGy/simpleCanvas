@@ -9,13 +9,16 @@ x Upgrade jQuery
 x Add bootstrap
 x Set up the two shell pages
 x Simplify into a single application architecture
-o Abstract pickers into separate views
+x Abstract pickers into separate views
+x Set up a collection for shapes
 
 Basic Features
 --------------
 x Selectable shape
-o Selectable Color
-o Place a shape on the canvas
+x Selectable Color
+x Place a shape on the canvas
+x Place squares centered on the cursor
+o Center circles on the cursor
 
 Advanced Features
 -----------------

@@ -6,7 +6,7 @@ define(['./shape.model'], function(ShapeModel) {
     defaults: function() {
       return {
         'curShape': ShapeModel.shapes.SQUARE,
-        'curColor': ShapeModel.colors[1]
+        'curColor': ShapeModel.colors[9]
       };
     },
     initialize: function() {

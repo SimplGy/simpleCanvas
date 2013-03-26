@@ -6,8 +6,10 @@
 </a>
 <div class="dropdown-menu">
     <% _.each(colors, function(color) { %>
-        <li><a tabindex="-1" href="javascript:void(0);" class='pickSquare'>
-            <i class="icon icon-tint" style="color:<%= color %>"></i>
+        <li><a tabindex="-1" href="javascript:void(0);" data-color="<%= color %>">
+            <!--<i class="icon icon-tint" style="color:<%= color %>"></i>-->
+            <i class="swatch" style="background-color:<%= color %>; color:<%= color %>">.</i>
+
             <%= color %>
         </a></li>
     <% }); %>
