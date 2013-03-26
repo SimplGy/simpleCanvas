@@ -6,13 +6,15 @@ define(['text!./draw.tmpl.html', 'views/shapePicker.view', 'views/colorPicker.vi
     className: 'drawPage',
     template: _.template(tmpl),
     events: {
-      'click canvas': 'addShape'
+      'click canvas': 'addShape',
+      'click #Reset': 'reset'
     },
     initialize: function() {
       this.model = this.options.app;
       this.shapes = new Backbone.Collection();
       this.listenTo(this.model, 'change', this.render);
-      return this.listenTo(this.shapes, 'add', this.render);
+      this.listenTo(this.shapes, 'add', this.render);
+      return this.listenTo(this.shapes, 'reset', this.render);
     },
     render: function() {
       var $Pickers;
@@ -72,6 +74,9 @@ define(['text!./draw.tmpl.html', 'views/shapePicker.view', 'views/colorPicker.vi
         shape: this.model.attributes.curShape
       });
       return this.shapes.add(newShape);
+    },
+    reset: function() {
+      return this.shapes.reset();
     }
   });
   return Page;

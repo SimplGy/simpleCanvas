@@ -9,8 +9,11 @@ define [], ->
       height: 100
     initialize: ->
       #Center the position
-      @set 'x', @get('x') - @get('width')/2
-      @set 'y', @get('y') - @get('height')/2
+      if @get('shape') is Model.shapes.SQUARE
+        @set 'x', @get('x') - @get('width')/2
+        @set 'y', @get('y') - @get('height')/2
+
+
   # Static Properties
   Model.colors = [
     '#5B4F37'

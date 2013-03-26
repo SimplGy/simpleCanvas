@@ -11,8 +11,10 @@ define([], function() {
       height: 100
     },
     initialize: function() {
-      this.set('x', this.get('x') - this.get('width') / 2);
-      return this.set('y', this.get('y') - this.get('height') / 2);
+      if (this.get('shape') === Model.shapes.SQUARE) {
+        this.set('x', this.get('x') - this.get('width') / 2);
+        return this.set('y', this.get('y') - this.get('height') / 2);
+      }
     }
   });
   Model.colors = ['#5B4F37', '#004A97', '#2968CC', '#B23624', '#FF634D', '#FD795B', '#FFF0AA', '#FDEDD0', '#D9FF67', '#12B267', '#4DFFAC', '#BCF1ED'];

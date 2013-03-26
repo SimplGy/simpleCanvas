@@ -12,12 +12,14 @@ define [
     template: _.template(tmpl)
     events:
       'click canvas': 'addShape'
+      'click #Reset': 'reset'
 
     initialize: ->
       @model = @options.app
       @shapes = new Backbone.Collection()
       @listenTo @model, 'change', @render
       @listenTo @shapes, 'add', @render
+      @listenTo @shapes, 'reset', @render
 
     render: ->
       @$el.html @template @model.attributes
@@ -61,6 +63,9 @@ define [
         color: @model.attributes.curColor
         shape: @model.attributes.curShape
       @shapes.add newShape
+
+    reset: ->
+      @shapes.reset()
 
   Page
 

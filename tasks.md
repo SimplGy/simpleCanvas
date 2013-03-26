@@ -18,19 +18,14 @@ x Selectable shape
 x Selectable Color
 x Place a shape on the canvas
 x Place squares centered on the cursor
-o Center circles on the cursor
+x Center circles on the cursor
+o Reset
 
 Advanced Features
 -----------------
+o Color wheel
 o Momentum color wheel
 o Ghost shape follows cursor over canvas
-
-Object Graph
-------------
-o Shape
-    o position, color, z-index
-o Shape > Rectangle
-o Shape > Circle
 
 Optimization
 ------------
