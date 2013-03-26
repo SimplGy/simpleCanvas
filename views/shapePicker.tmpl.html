@@ -1,0 +1,33 @@
+
+
+<a href="javascript:void(0);" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">
+    <% if(curShape === 'square') { %>
+        <i class="icon icon-white icon-stop"></i>
+    <% } else if(curShape === 'circle') { %>
+        <i class="icon icon-white icon-circle"></i>
+    <% } %>
+    Shape
+    <b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+    <li
+        <% if(curShape === 'square') { %>
+        class="active"
+    <% } %>
+    >
+        <a tabindex="-1" href="javascript:void(0);" class='pickSquare'>
+            <i class="icon icon-stop"></i>
+            Square
+        </a>
+    </li>
+    <li
+        <% if(curShape === 'circle') { %>
+            class="active"
+        <% } %>
+    >
+        <a tabindex="-1" href="javascript:void(0);" class='pickCircle'>
+            <i class="icon icon-circle"></i>
+            Circle
+        </a>
+    </li>
+</ul>

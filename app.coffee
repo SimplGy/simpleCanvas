@@ -13,7 +13,6 @@ define([
       '': 'showHome'
       'draw': 'showDraw'
     initialize: (options) ->
-      console.log "Application Started"
       @model = new AppModel() # Load in state from server or localstorage here
       @$el = $('body')
       Backbone.history.start()
@@ -22,8 +21,8 @@ define([
     showDraw: ->
       @showPage DrawView
     showPage: (Page) ->
-      @curView = new Page
-        'app': @model
+      @curView?.remove?() # Remove the current view if it exists
+      @curView = new Page 'app': @model
       @$el.html @curView.render().el
 
   return App

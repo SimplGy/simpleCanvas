@@ -5,6 +5,8 @@ define [], ->
       zIndex: 0
       posX: 0
       posY: 0
+      width: 100
+      height: 100
     initialize: ->
   # Static Properties
   Model.colors = [

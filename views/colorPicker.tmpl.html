@@ -1,2 +1,16 @@
 
-Color Picker Template
+<a id="drop1" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+    <i class="icon icon-white icon-tint" style="color:<%= curColor %>"></i>
+    Color
+    <b class="caret"></b>
+</a>
+<div class="dropdown-menu">
+    <% _.each(colors, function(color) { %>
+        <li><a tabindex="-1" href="javascript:void(0);" class='pickSquare'>
+            <i class="icon icon-tint" style="color:<%= color %>"></i>
+            <%= color %>
+        </a></li>
+    <% }); %>
+
+
+</div>

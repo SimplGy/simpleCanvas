@@ -1,20 +1,30 @@
 
 
-define ["text!./draw.tmpl.html"], (tmpl) ->
+define [
+  'text!./draw.tmpl.html'
+  'views/shapePicker.view'
+  'views/colorPicker.view'
+], (tmpl, ShapePicker, ColorPicker) ->
+
   Page = Backbone.View.extend
     className: 'drawPage'
-    events:
-      'click .shapePicker .pickSquare': 'onSquareClicked'
-      'click .shapePicker .pickCircle': 'onCircleClicked'
     template: _.template(tmpl)
+
     initialize: ->
       @model = @options.app
+
       @listenTo @model, 'change', @render
+
     render: ->
       @$el.html @template @model.attributes
+      # Build the views for the pickers and put them in this view
+      @pickShape = new ShapePicker
+        'app': @options.app
+      @pickColor = new ColorPicker
+        'app': @options.app
+      $Pickers = @$ '#Pickers'
+      $Pickers.append @pickColor.render().el
+      $Pickers.append @pickShape.render().el
       @
-    onSquareClicked: ->
-      @options.app.set 'curShape', @options.app.shapes.SQUARE
-    onCircleClicked: ->
-      @options.app.set 'curShape', @options.app.shapes.CIRCLE
+
   Page

@@ -8,7 +8,6 @@ define(['pages/draw.view', 'pages/home.view', 'models/app.model'], function(Draw
       'draw': 'showDraw'
     },
     initialize: function(options) {
-      console.log("Application Started");
       this.model = new AppModel();
       this.$el = $('body');
       return Backbone.history.start();
@@ -20,6 +19,13 @@ define(['pages/draw.view', 'pages/home.view', 'models/app.model'], function(Draw
       return this.showPage(DrawView);
     },
     showPage: function(Page) {
+      var _ref;
+
+      if ((_ref = this.curView) != null) {
+        if (typeof _ref.remove === "function") {
+          _ref.remove();
+        }
+      }
       this.curView = new Page({
         'app': this.model
       });
